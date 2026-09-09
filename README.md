@@ -22,3 +22,49 @@
 | Библиотека | FastAPI +SQLAlchemy |
 | Тестирование |  pytest  |
 | CI/CD |  GitHub  |
+
+## Основные сущности
+
+# *Клиенты*
+
+| Поле | Описание|
+| ---- | ------ |
+| client_id |ID клиента|
+|  full_name  | ФИО |
+| date_of_birth | Дата рождения |
+| passport_series |  Серия паспорта  |
+| passport_number |  Номер паспорта  |
+| phone|  Телефон  |
+| email| E-mail |
+| address | Адрес проживания |
+| registration_date | Дата регистрации в банке |
+| status | Статус  |
+
+# *Счета*
+
+| Поле | Описание|
+| ---- | ------ |
+| account_id |ID счета|
+|  client_id  | Ссылка на клиента |
+| account_type | Тип |
+| currency |  Валюта  |
+| balance |  Текущий баланс  |
+| opened_at|  Дата открытия  |
+| closed_at| Дата закрытия |
+| status | Статус  |
+
+# *Операции по счетам*
+
+| Поле | Описание|
+| ---- | ------ |
+| transaction_id |ID операции|
+|  account_id  | Счет по которому прошла операция |
+| transaction_type | Тип операции |
+| amount |  Сумма  |
+| currency |  Валюта операции |
+| executed_at|  Время проведения |
+| description| Комментарий: назначение платежа и т.п. |
+| related_transaction_id | Для переводов |
+
+
+
